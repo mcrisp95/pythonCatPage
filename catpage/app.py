@@ -61,4 +61,4 @@ def get_post(post_id):
 
 
 
-app.run(port=80)
+app.run()
