@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>{% block title %} Matt Makes a Dodgy REST API and Website of His Cats {% endblock %}</h1>
+{% for post in posts %}
+<a href="{{ url_for('post', post_id=post['id']) }}">
+    <h2>{{ post['title'] }}</h2>
+</a>
+<span class="badge badge-primary">{{ post['created'] }}</span>
+<hr>
+{% endfor %}
+<h2>There is literally zero security. Please be nice</h2>
+<h3>This site is made with python and flask, and is hosted in AWS</h3>
+{% endblock %}
